@@ -1,23 +1,17 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
-
-int main() {
+using namespace std;
+int main()
+{
     setlocale(LC_ALL, "");
+    printf("Введите число x и шаг n:");
     double x, n;
-
-    std::cout << "Введите число x: ";
-    std::cin >> x;
-    std::cout << "Введите шаг n: ";
-    std::cin >> n;
-
+    scanf_s("%lf", &x);
+    scanf_s("%lf", &n);
     if (n == 0) {
-        std::cout << "Ошибка: шаг не может быть равен 0" << std::endl;
+        cout << "Ошибка: шаг не может быть равен 0" << endl;
         return 1;
     }
-
-    double result = round(x / n) * n;
-
-    std::cout << "Ближайшее число, кратное " << n << ": " << result << std::endl;
-
-    return 0;
+    double y = round(x / n) * n;
+    cout << "Результат:" << y << endl;
 }
